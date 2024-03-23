@@ -1,5 +1,5 @@
 # CleanUI
-UI component library for base components.
+UI component library for REACT.
 
 CleanUI is a versatile and customizable UI component library focused on open-source collaboration, clean UI design, and extensive customization options. With CleanUI, you can easily integrate pre-styled base components into your projects using JavaScript object styling, making it compatible with any project setup.
 
