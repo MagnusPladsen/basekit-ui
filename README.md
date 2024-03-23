@@ -13,4 +13,4 @@ Open-Source Collaboration: Built with open-source collaboration in mind, FlexiSt
 We welcome contributions from the community! Please refer to the contribution guidelines for more information.
 
 ## License
-FlexiStyle is open-source software licensed under the MIT License.
+CleanUI is open-source software licensed under the MIT License.
