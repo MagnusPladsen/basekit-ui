@@ -6,12 +6,13 @@ import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import babel from "@rollup/plugin-babel";
+import replace from '@rollup/plugin-replace';
 
 const packageJson = require("./package.json");
 
 export default [
   {
-    input: "src/index.ts",
+    input: "index.ts",
     output: [
       {
         file: packageJson.main,
@@ -44,6 +45,10 @@ export default [
         babelHelpers: "bundled",
         exclude: "node_modules/**",
       }),
+      replace({
+        preventAssignment: false,
+        'process.env.NODE_ENV': '"development"'
+     })
     ],
     external: ["react", "react-dom"],
   },
