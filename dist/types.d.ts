@@ -1,9 +1,11 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
 
 interface BKButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-    primary: boolean;
+    variant?: BKButtonVariant;
+    href?: string;
 }
+type BKButtonVariant = "contained" | "outlined" | "text";
 
-declare function Button({ children, primary }: BKButtonProps): react_jsx_runtime.JSX.Element;
+declare function Button({ className, children, variant, href, ...otherProps }: BKButtonProps): react_jsx_runtime.JSX.Element;
 
 export { Button };
