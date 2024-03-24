@@ -1,5 +1,8 @@
 interface BKButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  primary: boolean;
+  variant?: BKButtonVariant;
+  href?: string;
 }
 
-export type { BKButtonProps };
+type BKButtonVariant = "contained" | "outlined" | "text";
+
+export type { BKButtonProps, BKButtonVariant };
