@@ -1,5 +1,5 @@
-interface CleanUIButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface BKButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   primary: boolean;
 }
 
-export type { CleanUIButtonProps };
+export type { BKButtonProps };

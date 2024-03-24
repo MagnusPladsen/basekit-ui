@@ -1,17 +1,8 @@
 import React from "react";
-import { CleanUIButtonProps } from "./Button.types";
-import cleanUIButtonStyles from "./Button.styles";
+import { BKButtonProps } from "./Button.types";
 
-function Button({ children, primary = true }: CleanUIButtonProps) {
-  return (
-    <button
-      style={{
-        ...(primary && cleanUIButtonStyles.primary),
-      }}
-    >
-      {children}
-    </button>
-  );
+function Button({ children, primary = true }: BKButtonProps) {
+  return <button className="bg-red-500">{children}</button>;
 }
 
 export default Button;
