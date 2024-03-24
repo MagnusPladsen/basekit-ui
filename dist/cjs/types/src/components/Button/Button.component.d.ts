@@ -1,11 +1,4 @@
-import * as react_jsx_runtime from 'react/jsx-runtime';
-
-interface BKButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-    variant?: BKButtonVariant;
-    href?: string;
-}
-type BKButtonVariant = "contained" | "outlined" | "text";
-
+import { BKButtonProps } from "./Button.types";
 /**
  * The Button component renders a button element with specified props and styling.
  * @param {BKButtonProps}  - The `Button` component takes the following parameters:
@@ -15,6 +8,5 @@ type BKButtonVariant = "contained" | "outlined" | "text";
  * @param {string} href - The href prop is a string that is used to determine the href attribute of the button element. If the href prop is provided, the button element will be rendered as an anchor element with the specified href attribute.
  * @returns The `Button` component is being returned. It renders a button element with the specified
  */
-declare function Button({ className, children, variant, href, ...otherProps }: BKButtonProps): react_jsx_runtime.JSX.Element;
-
-export { Button };
+declare function Button({ className, children, variant, href, ...otherProps }: BKButtonProps): import("react/jsx-runtime").JSX.Element;
+export default Button;
