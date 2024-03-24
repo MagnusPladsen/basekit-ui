@@ -1,1 +1,2 @@
-export * from './src/index';
+import "./index.css";
+export * from "./components";
