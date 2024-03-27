@@ -2309,6 +2309,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-themes@npm:^8.0.4":
+  version: 8.0.4
+  resolution: "@storybook/addon-themes@npm:8.0.4"
+  dependencies:
+    ts-dedent: "npm:^2.0.0"
+  checksum: 10c0/af0825832809e8a967ea44d6f34d24e201bd8f752bd3f08daf2a5e79b46b5d2cec398bf226b359476e8717109a3dcb311d70feef816f6427a21c917e07437ced
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-toolbars@npm:8.0.4":
   version: 8.0.4
   resolution: "@storybook/addon-toolbars@npm:8.0.4"
@@ -3844,6 +3853,7 @@ __metadata:
     "@storybook/addon-links": "npm:^8.0.4"
     "@storybook/addon-onboarding": "npm:^8.0.4"
     "@storybook/addon-styling-webpack": "npm:^1.0.0"
+    "@storybook/addon-themes": "npm:^8.0.4"
     "@storybook/blocks": "npm:^8.0.4"
     "@storybook/react": "npm:^8.0.4"
     "@storybook/react-vite": "npm:^8.0.4"

@@ -4,7 +4,7 @@ import { BKButtonVariant } from "./Button.types";
 
 function buttonClasses(variant: BKButtonVariant, className?: string) {
   const containedClasses = {
-    "bg-blue-500 text-white hover:bg-blue-600 hover:shadow-md":
+    "bg-blue-500  text-white hover:bg-blue-600 hover:shadow-md":
       variant === "contained",
   };
 
