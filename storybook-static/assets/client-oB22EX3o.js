@@ -1,0 +1,1 @@
+import{r as a}from"./index-ohgCZvhn.js";var o={},e=a;{var t=e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;o.createRoot=function(n,r){t.usingClientEntryPoint=!0;try{return e.createRoot(n,r)}finally{t.usingClientEntryPoint=!1}},o.hydrateRoot=function(n,r,i){t.usingClientEntryPoint=!0;try{return e.hydrateRoot(n,r,i)}finally{t.usingClientEntryPoint=!1}}}export{o as c};
