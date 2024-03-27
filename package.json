@@ -8,7 +8,9 @@
   "scripts": {
     "rollup": "rm -rf dist && rollup -c -w --bundleConfigAsCjs && tsc --emitDeclarationOnly && npm link",
     "prepublish:public": "npm run rollup && npm run bump-version",
-    "publish:public": "npm publish --access public"
+    "publish:public": "npm publish --access public",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "MagnusPladsen",
   "license": "MIT",
@@ -18,11 +20,21 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.0.4",
+    "@storybook/addon-interactions": "^8.0.4",
+    "@storybook/addon-links": "^8.0.4",
+    "@storybook/addon-onboarding": "^8.0.4",
+    "@storybook/addon-styling-webpack": "^1.0.0",
+    "@storybook/blocks": "^8.0.4",
+    "@storybook/react": "^8.0.4",
+    "@storybook/react-vite": "^8.0.4",
+    "@storybook/test": "^8.0.4",
     "@types/react": "^18.2.69",
     "react": "^18.2.0",
     "rollup": "^4.13.0",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "storybook": "^8.0.4",
     "tailwindcss": "^3.4.1",
     "tslib": "^2.6.2",
     "typescript": "^5.4.3"
