@@ -7,6 +7,8 @@ BaseKit-UI is a versatile and customizable UI component library focused on open-
 
 The components are based on [Shadcn/UI](https://ui.shadcn.com/) but upgraded with additonal features and customization options.
 
+The icons are from [Lucide](https://lucide.dev/).
+
 ## Features
 Base Components: A collection of essential base components styled and ready to use out of the box.
 JavaScript Object Styling: Utilize JavaScript object styling to customize components to fit seamlessly into your project.
