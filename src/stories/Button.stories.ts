@@ -16,34 +16,55 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    variant: { control: 'variant', options: ['contained', 'outlined', 'text']},
+    variant: { control: 'variant', options: ['contained', 'outlined', 'text'], href: ""},
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn(), children: 'Button', variant: 'contained'},
+  args: { onClick: fn(), children: 'Button', variant: 'default', href: ""},
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const contained: Story = {
+export const primary: Story = {
   args: {
-    variant: "contained",
-    children: 'Contained',
+    variant: "default",
+    children: 'Default',
   },
 };
 
-export const outlined: Story = {
+export const secondary: Story = {
   args: {
-    variant: "outlined",
-    children: 'Outlined',
+    variant: "secondary",
+    children: 'Secondary',
   },
 };
 
-export const text: Story = {
+export const outline: Story = {
   args: {
-    variant: "text",
-    children: 'Text',
+    variant: "outline",
+    children: 'Outline',
+  },
+};
+
+export const destructive: Story = {
+  args: {
+    variant: "destructive",
+    children: 'Destructive',
+  },
+};
+
+export const ghost: Story = {
+  args: {
+    variant: "ghost",
+    children: 'Ghost',
+  },
+};
+
+export const link: Story = {
+  args: {
+    variant: "link",
+    children: 'Link',
   },
 };
 

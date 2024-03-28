@@ -1,8 +1,9 @@
-interface BKButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  variant?: BKButtonVariant;
+import buttonVariants from "./Button.styles";
+import { type VariantProps } from "class-variance-authority"
+
+interface BKButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+VariantProps<typeof buttonVariants> {
   href?: string;
 }
 
-type BKButtonVariant = "contained" | "outlined" | "text";
-
-export type { BKButtonProps, BKButtonVariant };
+export type { BKButtonProps };
