@@ -33,4 +33,4 @@ jobs:
       - run: yarn version --new-version=prerelease --preid=beta.${{ github.run_number }}
       - run: yarn publish --access=public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
