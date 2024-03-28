@@ -10,7 +10,7 @@
     "test": "echo \"Test: Test run\"",
     "prepublish:public": "npm run rollup && npm run bump-version",
     "publish:public": "npm publish --access public",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev --ci -p 6006",
     "build-storybook": "storybook build"
   },
   "author": "MagnusPladsen",
