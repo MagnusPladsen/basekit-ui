@@ -6,7 +6,7 @@
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rm -rf dist && rollup -c -w --bundleConfigAsCjs && tsc --emitDeclarationOnly && npm link",
+    "build": "rm -rf dist && rollup -c -w --bundleConfigAsCjs && tsc --emitDeclarationOnly",
     "prepublish:public": "npm run rollup && npm run bump-version",
     "publish:public": "npm publish --access public",
     "storybook": "storybook dev -p 6006",
