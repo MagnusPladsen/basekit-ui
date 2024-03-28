@@ -1,6 +1,6 @@
 {
   "name": "basekit-ui",
-  "version": "1.0.11",
+  "version": "0.0.2",
   "description": "UI component library for REACT.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
