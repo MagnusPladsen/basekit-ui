@@ -15,20 +15,22 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for git describe to calculate the version
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm version prerelease --preid=beta.${{ github.run_number }}
-      - run: npm publish:public
+      - run: yarn install --frozen-lockfile
+      - run: yarn version --new-version=prerelease --preid=beta.${{ github.run_number }}
+      - run: yarn publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
