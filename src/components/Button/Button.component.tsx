@@ -1,8 +1,8 @@
 import React from "react";
+import { cn } from "../../utils/cn";
+import buttonVariants from "./Button.styles";
 import { BKButtonProps } from "./Button.types";
 import ButtonWrapper from "./ButtonWrapper.component";
-import buttonClasses from "./Button.styles";
-
 
 /**
  * The Button component renders a button element with specified props and styling.
@@ -13,20 +13,20 @@ import buttonClasses from "./Button.styles";
  * @param {string} href - The href prop is a string that is used to determine the href attribute of the button element. If the href prop is provided, the button element will be rendered as an anchor element with the specified href attribute.
  * @returns The `Button` component is being returned. It renders a button element with the specified
  */
-function Button({
-  className,
-  children,
-  variant = "contained",
-  href,
-  ...otherProps
-}: BKButtonProps) {
-  return (
-    <ButtonWrapper href={href}>
-      <button className={buttonClasses(variant, className)} {...otherProps}>
-        {children}
-      </button>
-    </ButtonWrapper>
-  );
-}
+const Button = React.forwardRef<HTMLButtonElement, BKButtonProps>(
+  ({ className, variant, size, href, children, ...props }, ref) => {
+    return (
+      <ButtonWrapper href={href}>
+        <button
+          className={cn(buttonVariants({ variant, size, className }))}
+          ref={ref}
+          {...props}
+        >
+          {children}
+        </button>
+      </ButtonWrapper>
+    );
+  }
+);
 
 export default Button;
