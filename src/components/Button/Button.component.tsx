@@ -3,7 +3,13 @@ import { cn } from "../../utils/cn";
 import buttonVariants from "./Button.styles";
 import { BKButtonProps } from "./Button.types";
 import ButtonWrapper from "./ButtonWrapper.component";
-import { SquareArrowOutUpRight } from "lucide-react";
+import {
+  SquareArrowOutUpRight,
+  ArrowRight,
+  ArrowLeft,
+  ArrowUp,
+  ArrowDown,
+} from "lucide-react";
 import { Loader2 } from "lucide-react";
 
 /**
@@ -29,6 +35,7 @@ const Button = React.forwardRef<HTMLButtonElement, BKButtonProps>(
       loading,
       disabled,
       disableOnClickEffect,
+      arrow,
       ...props
     },
     ref
@@ -37,11 +44,15 @@ const Button = React.forwardRef<HTMLButtonElement, BKButtonProps>(
       <ButtonWrapper href={href}>
         <button
           aria-label="button"
-          className={cn(buttonVariants({ variant, size, className, disableOnClickEffect }))}
+          className={cn(
+            buttonVariants({ variant, size, className, disableOnClickEffect })
+          )}
           ref={ref}
           disabled={loading || disabled}
           {...props}
         >
+          {!disableDefaultIcon && arrow === "up" && <ArrowUp size={16} />}
+          {!disableDefaultIcon && arrow === "left" && <ArrowLeft size={16} />}
           {children}{" "}
           {!disableDefaultIcon && variant === "link" && (
             <SquareArrowOutUpRight size={16} />
@@ -52,6 +63,8 @@ const Button = React.forwardRef<HTMLButtonElement, BKButtonProps>(
               className="animate-spin absolute top-[50%] left-[50%] mt-[-8px] ml-[-8px]"
             />
           )}
+          {!disableDefaultIcon && arrow === "right" && <ArrowRight size={16} />}
+          {!disableDefaultIcon && arrow === "down" && <ArrowDown size={16} />}
         </button>
       </ButtonWrapper>
     );
