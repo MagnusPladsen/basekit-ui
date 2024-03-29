@@ -31,6 +31,7 @@ const BKButtonIcons = {
   ArrowUp,
   Loader2,
   SquareArrowOutUpRight,
+  // add menu icon, search icon, etc.
 };
 
 function showIcon(
