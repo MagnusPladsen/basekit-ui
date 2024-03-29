@@ -13,6 +13,10 @@ import {
   ArrowUp,
   Loader2,
   SquareArrowOutUpRight,
+  Search,
+  Menu,
+  ChevronRight,
+  ChevronLeft,
 } from "lucide-react";
 import { BKButtonIconProp } from "../Button.types";
 
@@ -31,7 +35,10 @@ const BKButtonIcons = {
   ArrowUp,
   Loader2,
   SquareArrowOutUpRight,
-  // add menu icon, search icon, etc.
+  Search,
+  Menu,
+  ChevronRight,
+  ChevronLeft,
 };
 
 function showIcon(
