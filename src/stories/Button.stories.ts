@@ -169,6 +169,40 @@ export const customStyle: Story = {
   },
 };
 
+export const arrowRight: Story = {
+  args: {
+    variant: "default",
+    children: "Right",
+    arrow: "right",
+    },
+};
+
+export const arrowLeft: Story = {
+  args: {
+    variant: "default",
+    children: "Left",
+    arrow: "left",
+  },
+};
+
+export const arrowUp: Story = {
+  args: {
+    variant: "default",
+    children: "Up",
+    arrow: "up",
+  },
+};
+
+export const arrowDown: Story = {
+  args: {
+    variant: "default",
+    children: "Down",
+    arrow: "down",
+  },
+};
+
+
+
 export const decorators = [
   withThemeByClassName({
     themes: {
