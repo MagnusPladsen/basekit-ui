@@ -6,9 +6,22 @@ const ButtonWrapper = ({
   children: JSX.Element;
 }) => {
   if (href) {
-    return <a href={href} target="_blank">{children}</a>;
+    return (
+      <a href={href} target="_blank">
+        {children}
+      </a>
+    );
   }
-  return <>{children}</>;
+  return (
+    <div
+      style={{
+        margin: "8px",
+        position: "relative",
+      }}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default ButtonWrapper;
