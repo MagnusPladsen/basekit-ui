@@ -8,6 +8,7 @@ interface BKButtonProps
   href?: string;
   disableDefaultIcon?: boolean;
   loading?: boolean;
+  disableOnClickEffect?: boolean;
 }
 
 export type { BKButtonProps };
