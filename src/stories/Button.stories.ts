@@ -142,6 +142,33 @@ export const disabled: Story = {
   },
 };
 
+export const disabledOnClickEffect: Story = {
+  args: {
+    variant: "default",
+    children: "Default",
+    disableOnClickEffect: true,
+  },
+};
+
+export const customClasses: Story = {
+  args: {
+    variant: "default",
+    children: "Custom",
+    className: "bg-teal-500 text-white hover:scale-105 transition-all",
+  },
+};
+
+export const customStyle: Story = {
+  args: {
+    variant: "default",
+    children: "Custom",
+    style: {
+      background: "green",
+      color: "white",
+    },
+  },
+};
+
 export const decorators = [
   withThemeByClassName({
     themes: {
