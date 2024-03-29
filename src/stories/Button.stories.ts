@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import { withThemeByClassName } from "@storybook/addon-themes";
 import "../index.css";
 import buttonVariants from "../components/Button/Button.styles";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -19,18 +20,17 @@ const meta = {
   argTypes: {
     variant: {
       description: "Select button variant",
-      type: { name: "string" },
       control: {
         type: "select",
-        options: [
-          "default",
-          "secondary",
-          "outline",
-          "destructive",
-          "ghost",
-          "link",
-        ],
       },
+      options: [
+        "default",
+        "secondary",
+        "outline",
+        "destructive",
+        "ghost",
+        "link",
+      ],
       defaultValue: "default",
     },
     children: {
@@ -40,7 +40,8 @@ const meta = {
       defaultValue: "Button",
     },
     href: {
-      description: "If href is provided, the button will be rendered as an anchor element with the specified href attribute.",
+      description:
+        "If href is provided, the button will be rendered as an anchor element with the specified href attribute.",
       type: { name: "string" },
       control: { type: "text" },
       defaultValue: "",
@@ -51,7 +52,15 @@ const meta = {
       control: { type: null },
     },
     disableDefaultIcon: {
-      description: "The disableIcon prop is a boolean that is used to determine whether the default icon, if any, should be rendered. DefaultIcon is rendered if specified variant has an icon",
+      description:
+        "The disableIcon prop is a boolean that is used to determine whether the default icon, if any, should be rendered. DefaultIcon is rendered if specified variant has an icon",
+      type: { name: "boolean" },
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
+    loading: {
+      description:
+        "The loading prop is a boolean that is used to determine whether the loading spinner should be rendered.",
       type: { name: "boolean" },
       control: { type: "boolean" },
       defaultValue: false,
@@ -105,6 +114,14 @@ export const link: Story = {
     variant: "link",
     children: "Link",
     disableDefaultIcon: false,
-  },  
+  },
 };
 
+export const loading: Story = {
+  args: {
+    variant: "default",
+    children: "Loading",
+    disableDefaultIcon: false,
+    loading: true,
+  },
+};

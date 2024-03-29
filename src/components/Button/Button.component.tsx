@@ -4,6 +4,7 @@ import buttonVariants from "./Button.styles";
 import { BKButtonProps } from "./Button.types";
 import ButtonWrapper from "./ButtonWrapper.component";
 import { SquareArrowOutUpRight } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 /**
  * The Button component renders a button element with specified props and styling.
@@ -26,8 +27,8 @@ const Button = React.forwardRef<HTMLButtonElement, BKButtonProps>(
       href,
       children,
       disableDefaultIcon,
-      startIcon,
-      endIcon,
+      loading,
+      disabled,
       ...props
     },
     ref
@@ -37,14 +38,19 @@ const Button = React.forwardRef<HTMLButtonElement, BKButtonProps>(
         <button
           className={cn(buttonVariants({ variant, size, className }))}
           ref={ref}
+          disabled={loading || disabled}
           {...props}
         >
-          {startIcon}
           {children}{" "}
           {!disableDefaultIcon && variant === "link" && (
             <SquareArrowOutUpRight size={16} />
           )}
-          {endIcon}
+          {!disableDefaultIcon && loading && (
+            <Loader2
+              size={16}
+              className="animate-spin absolute top-[50%] left-[50%] mt-[-8px] ml-[-8px]"
+            />
+          )}
         </button>
       </ButtonWrapper>
     );
