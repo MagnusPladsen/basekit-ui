@@ -65,6 +65,67 @@ const meta = {
       control: { type: "boolean" },
       defaultValue: false,
     },
+    arrow: {
+      description: "Shows arrow icon according to the direction specified",
+      type: { name: "string" },
+      control: { type: "select" },
+      options: ["up", "down", "left", "right"],
+      defaultValue: "",
+    },
+    icon: {
+      description: "Icon to be displayed",
+      type: { name: "string" },
+      control: { type: "select" },
+      options: [
+        "CircleMinus",
+        "CirclePlus",
+        "CircleX",
+        "CircleCheck",
+        "CirclePlay",
+        "CirclePause",
+        "CircleAlert",
+        "CircleHelp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowUp",
+        "Loader2",
+        "SquareArrowOutUpRight",
+      ],
+      defaultValue: "",
+    },
+    iconLocation: {
+      description: "Icon location",
+      type: { name: "string" },
+      control: { type: "select" },
+      options: ["left", "right"],
+      defaultValue: "",
+    },
+    iconSize: {
+      description: "Icon size",
+      type: { name: "number" },
+      control: { type: "number" },
+      defaultValue: 16,
+    },
+    iconColor: {
+      description: "Icon color",
+      type: { name: "string" },
+      control: { type: "color" },
+      defaultValue: "",
+    },
+    iconClassName: {
+      description: "Icon class name",
+      type: { name: "string" },
+      control: { type: "text" },
+      defaultValue: "",
+    },
+    disableOnClickEffect: {
+      description:
+        "The disableOnClickEffect prop is a boolean that is used to determine whether the onClick effect should be disabled.",
+      type: { name: "boolean" },
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn(), children: "Button", variant: "default", href: "" },
@@ -169,48 +230,12 @@ export const customStyle: Story = {
   },
 };
 
-export const arrowRight: Story = {
-  args: {
-    variant: "default",
-    children: "Right",
-    arrow: "right",
-    },
-};
-
-export const arrowLeft: Story = {
-  args: {
-    variant: "default",
-    children: "Left",
-    arrow: "left",
-  },
-};
-
-export const arrowUp: Story = {
-  args: {
-    variant: "default",
-    children: "Up",
-    arrow: "up",
-  },
-};
-
-export const arrowDown: Story = {
-  args: {
-    variant: "default",
-    children: "Down",
-    arrow: "down",
-  },
-};
-
-
-
 export const decorators = [
   withThemeByClassName({
     themes: {
-      light: 'light',
-      dark: 'dark',
+      light: "light",
+      dark: "dark",
     },
-    defaultTheme: 'light',
+    defaultTheme: "light",
   }),
 ];
-
-

@@ -1,8 +1,12 @@
-import { icons } from "lucide-react";
+import BKButtonIcons from "./components/Button.icons";
 import buttonVariants from "./Button.styles";
 import { type VariantProps } from "class-variance-authority";
 
-type BKButtonArrowProps = "up" | "down" | "left" | "right";
+type BKButtonArrowProp = "up" | "down" | "left" | "right";
+
+type BKButtonIconProp = keyof typeof BKButtonIcons;
+
+type BKButtonIconLocationProp = "left" | "right";
 
 interface BKButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -11,7 +15,17 @@ interface BKButtonProps
   disableDefaultIcon?: boolean;
   loading?: boolean;
   disableOnClickEffect?: boolean;
-  arrow?: BKButtonArrowProps,
+  arrow?: BKButtonArrowProp;
+  icon?: BKButtonIconProp;
+  iconLocation?: BKButtonIconLocationProp;
+  iconSize?: number;
+  iconColor?: string;
+  iconClassName?: string;
 }
 
-export type { BKButtonProps };
+export type {
+  BKButtonProps,
+  BKButtonArrowProp,
+  BKButtonIconLocationProp,
+  BKButtonIconProp,
+};
