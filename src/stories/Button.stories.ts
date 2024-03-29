@@ -117,6 +117,14 @@ export const link: Story = {
   },
 };
 
+export const linkIconDisabled: Story = {
+  args: {
+    variant: "link",
+    children: "Link",
+    disableDefaultIcon: true,
+  },
+};
+
 export const loading: Story = {
   args: {
     variant: "default",
@@ -125,3 +133,23 @@ export const loading: Story = {
     loading: true,
   },
 };
+
+export const disabled: Story = {
+  args: {
+    variant: "default",
+    children: "Disabled",
+    disabled: true,
+  },
+};
+
+export const decorators = [
+  withThemeByClassName({
+    themes: {
+      light: 'light',
+      dark: 'dark',
+    },
+    defaultTheme: 'light',
+  }),
+];
+
+
