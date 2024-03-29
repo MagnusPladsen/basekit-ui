@@ -8,7 +8,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Components/Button",
+  title: "Components/Button With Icons",
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
@@ -135,98 +135,74 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const primary: Story = {
+
+export const defaultNoIcons: Story = {
+    args: {
+      variant: "default",
+      children: "Default",
+    },
+  };
+  
+export const arrowRight: Story = {
   args: {
     variant: "default",
-    children: "Default",
+    children: "Right",
+    arrow: "right",
   },
 };
 
-export const secondary: Story = {
+export const arrowLeft: Story = {
   args: {
-    variant: "secondary",
-    children: "Secondary",
+    variant: "default",
+    children: "Left",
+    arrow: "left",
   },
 };
 
-export const outline: Story = {
+export const arrowUp: Story = {
   args: {
-    variant: "outline",
-    children: "Outline",
+    variant: "default",
+    children: "Up",
+    arrow: "up",
   },
 };
 
-export const destructive: Story = {
+export const arrowDown: Story = {
+  args: {
+    variant: "default",
+    children: "Down",
+    arrow: "down",
+  },
+};
+
+export const AlertWithIcon: Story = {
   args: {
     variant: "destructive",
-    children: "Destructive",
-  },
-};
-
-export const ghost: Story = {
-  args: {
-    variant: "ghost",
-    children: "Ghost",
-  },
-};
-
-export const link: Story = {
-  args: {
-    variant: "link",
-    children: "Link",
-    disableDefaultIcon: false,
-  },
-};
-
-export const linkIconDisabled: Story = {
-  args: {
-    variant: "link",
-    children: "Link",
-    disableDefaultIcon: true,
-  },
-};
-
-export const loading: Story = {
-  args: {
-    variant: "default",
-    children: "Loading",
-    disableDefaultIcon: false,
-    loading: true,
-  },
-};
-
-export const disabled: Story = {
-  args: {
-    variant: "default",
-    children: "Disabled",
-    disabled: true,
-  },
-};
-
-export const disabledOnClickEffect: Story = {
-  args: {
-    variant: "default",
-    children: "Default",
+    children: "Alert",
+    icon: "CircleAlert",
+    iconLocation: "left",
+    iconSize: 16,
     disableOnClickEffect: true,
   },
 };
 
-export const customClasses: Story = {
+export const LinkWithCustomIcon: Story = {
   args: {
-    variant: "default",
-    children: "Custom",
-    className: "bg-teal-500 text-white hover:scale-105 transition-all",
+    variant: "link",
+    children: "Custom link",
+    icon: "ArrowRight",
+    iconLocation: "right",
+    disableDefaultIcon: true,
   },
 };
 
-export const customStyle: Story = {
+export const AddButton: Story = {
   args: {
     variant: "default",
-    children: "Custom",
-    style: {
-      background: "green",
-      color: "white",
-    },
+    children: "Add",
+    icon: "CirclePlus",
+    iconLocation: "left",
+    iconSize: 16,
   },
 };
 
