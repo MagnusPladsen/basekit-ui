@@ -17,10 +17,13 @@ import {
   Menu,
   ChevronRight,
   ChevronLeft,
+  ChevronDown,
+  ChevronUp,
+  CalendarDays,
 } from "lucide-react";
-import { BKButtonIconProp } from "../Button.types";
+import { BKIconProp } from "./Icons.type";
 
-const BKButtonIcons = {
+const BKIcons = {
   CircleMinus,
   CirclePlus,
   CircleX,
@@ -39,17 +42,20 @@ const BKButtonIcons = {
   Menu,
   ChevronRight,
   ChevronLeft,
+  ChevronDown,
+  ChevronUp,
+  CalendarDays
 };
 
 function showIcon(
-  icon: BKButtonIconProp,
+  icon: BKIconProp,
   size?: number,
   color?: string,
   className?: string
 ) {
-  const Icon = BKButtonIcons[icon];
+  const Icon = BKIcons[icon];
   return <Icon size={size ?? 16} color={color} className={className} />;
 }
 
 export { showIcon };
-export default BKButtonIcons;
+export default BKIcons;
