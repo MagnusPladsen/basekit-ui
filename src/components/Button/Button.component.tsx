@@ -10,12 +10,11 @@ import React from "react";
 import { cn } from "../../utils/cn";
 import buttonVariants from "./Button.styles";
 import {
-  BKButtonIconLocationProp,
-  BKButtonIconProp,
   BKButtonProps,
 } from "./Button.types";
 import ButtonWrapper from "./components/ButtonWrapper.component";
 import IconWrapper from "./components/IconWrapper.component";
+import { BKIconProp, BKIconLocationProp } from "../Icons/Icons.type";
 
 /**
  * The Button component renders a button element with specified props and styling.
@@ -26,8 +25,8 @@ import IconWrapper from "./components/IconWrapper.component";
  * @param {string} href - The href prop is a string that is used to determine the href attribute of the button element. If the href prop is provided, the button element will be rendered as an anchor element with the specified href attribute.
  * @param {boolean} disableDefaultIcon - The disableIcon prop is a boolean that is used to determine whether the default icon, if any, should be rendered. DefaultIcon is rendered if specified variant has an icon.
  * @param {boolean} loading - The loading prop is a boolean that is used to determine whether the loading spinner should be rendered.
- * @param {BKButtonIconLocationProp} icon - The icon prop is a string that is used to determine the icon to be displayed.
- * @param {BKButtonIconLocationProp} iconLocation - The iconLocation prop is a string that is used to determine the location of the icon. It can be one of the following values: "left" or "right".
+ * @param {BKIconProp} icon - The icon prop is a string that is used to determine the icon to be displayed.
+ * @param {BKIconLocationProp} iconLocation - The iconLocation prop is a string that is used to determine the location of the icon. It can be one of the following values: "left" or "right".
  * @param {number} iconSize - The iconSize prop is a number that is used to determine the size of the icon.
  * @param {string} iconColor - The iconColor prop is a string that is used to determine the color of the icon.
  * @param {string} iconClassName - The iconClassName prop is a string that is used to apply additional tailwind classes to the icon element.
