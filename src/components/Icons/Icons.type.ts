@@ -1,6 +1,6 @@
-import BKIcons from "./Icons.component";
+import { iconList } from "./Icons.component";
 
-type BKIconProp = keyof typeof BKIcons;
+type BKIconProp = keyof typeof iconList;
 
 type BKIconLocationProp = "left" | "right";
 
