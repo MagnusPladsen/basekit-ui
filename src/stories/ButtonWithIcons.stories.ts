@@ -5,6 +5,7 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 import "../index.css";
 import buttonVariants from "../components/Button/Button.styles";
 import { SquareArrowOutUpRight } from "lucide-react";
+import { iconList } from "../components/Icons/Icons.component";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -76,22 +77,7 @@ const meta = {
       description: "Icon to be displayed",
       type: { name: "string" },
       control: { type: "select" },
-      options: [
-        "CircleMinus",
-        "CirclePlus",
-        "CircleX",
-        "CircleCheck",
-        "CirclePlay",
-        "CirclePause",
-        "CircleAlert",
-        "CircleHelp",
-        "ArrowDown",
-        "ArrowLeft",
-        "ArrowRight",
-        "ArrowUp",
-        "Loader2",
-        "SquareArrowOutUpRight",
-      ],
+      options: Object.keys(iconList),
       defaultValue: "",
     },
     iconLocation: {
@@ -137,12 +123,12 @@ type Story = StoryObj<typeof Button>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 
 export const defaultNoIcons: Story = {
-    args: {
-      variant: "default",
-      children: "Default",
-    },
-  };
-  
+  args: {
+    variant: "default",
+    children: "Default",
+  },
+};
+
 export const arrowRight: Story = {
   args: {
     variant: "default",
@@ -186,7 +172,7 @@ export const AlertWithIcon: Story = {
   },
 };
 
-export const LinkWithCustomIcon: Story = {
+export const LinkWithSpecifiedIcon: Story = {
   args: {
     variant: "link",
     children: "Custom link",
@@ -202,6 +188,26 @@ export const AddButton: Story = {
     children: "Add",
     icon: "CirclePlus",
     iconLocation: "left",
+    iconSize: 16,
+  },
+};
+
+export const MenuButton: Story = {
+  args: {
+    variant: "default",
+    children: "Menu",
+    icon: "Menu",
+    iconLocation: "left",
+    iconSize: 16,
+  },
+};
+
+export const DropDownButton: Story = {
+  args: {
+    variant: "default",
+    children: "Dropdown",
+    icon: "ChevronDown",
+    iconLocation: "right",
     iconSize: 16,
   },
 };

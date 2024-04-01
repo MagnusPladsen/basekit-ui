@@ -1,5 +1,6 @@
-import { BKButtonIconProp, BKButtonIconLocationProp } from "../Button.types";
-import BKButtonIcons, { showIcon } from "./Button.icons";
+import Icon from "../../Icons/Icons.component";
+import { BKIconLocationProp, BKIconProp } from "../../Icons/Icons.type";
+
 
 const IconWrapper = ({
   icon,
@@ -9,24 +10,30 @@ const IconWrapper = ({
   iconLocation,
   children,
 }: {
-  icon?: BKButtonIconProp;
+  icon?: BKIconProp;
   iconColor?: string;
   iconSize?: number;
   iconClassName?: string;
-  iconLocation?: BKButtonIconLocationProp;
+  iconLocation?: BKIconLocationProp;
   children: React.ReactNode;
 }) => {
   if (!icon) {
     return <>{children}</>;
   }
 
+  const iconProps = {
+    iconSize,
+    iconColor,
+    iconClassName,
+    iconLocation,
+    icon,
+  };
+
   return (
     <div className="flex items-center gap-2">
-      {iconLocation === "left" &&
-        showIcon(icon, iconSize, iconColor, iconClassName)}
+      {iconLocation === "left" && <Icon {...iconProps} />}
       {children}
-      {!iconLocation || iconLocation === "right" &&
-        showIcon(icon, iconSize, iconColor, iconClassName)}
+      {!iconLocation || (iconLocation === "right" && <Icon {...iconProps} />)}
     </div>
   );
 };
