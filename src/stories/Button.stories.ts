@@ -5,6 +5,7 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 import "../index.css";
 import buttonVariants from "../components/Button/Button.styles";
 import { SquareArrowOutUpRight } from "lucide-react";
+import { iconList } from "../components/Icons/Icons.component";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -76,22 +77,7 @@ const meta = {
       description: "Icon to be displayed",
       type: { name: "string" },
       control: { type: "select" },
-      options: [
-        "CircleMinus",
-        "CirclePlus",
-        "CircleX",
-        "CircleCheck",
-        "CirclePlay",
-        "CirclePause",
-        "CircleAlert",
-        "CircleHelp",
-        "ArrowDown",
-        "ArrowLeft",
-        "ArrowRight",
-        "ArrowUp",
-        "Loader2",
-        "SquareArrowOutUpRight",
-      ],
+      options: Object.keys(iconList),
       defaultValue: "",
     },
     iconLocation: {
