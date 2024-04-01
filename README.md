@@ -1,6 +1,8 @@
 # BaseKit-UI
 Simple base UI component library for REACT – install and use it immediately, no configuration required.
 
+DOCS: https://basekitui.pladsen.dev/
+
 Whether you're a React novice or seasoned pro, our library offers modern, stylish components that are effortlessly customizable – no expertise required.
 
 BaseKit-UI is a versatile and customizable UI component library focused on open-source collaboration, clean UI design, and extensive customization options. With BaseKitUI, you can easily integrate pre-styled base components into your projects using JavaScript object styling, making it compatible with any project setup.
