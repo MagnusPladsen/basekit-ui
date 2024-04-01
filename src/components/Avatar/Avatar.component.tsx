@@ -1,6 +1,7 @@
-import { AvatarFallback } from "@radix-ui/react-avatar";
 import AvatarWrapper from "./components/AvatarWrapper.component";
 import AvatarImage from "./components/AvatarImage.component";
+import * as AvatarPrimitive from "@radix-ui/react-avatar";
+import AvatarFallback from "./components/AvatarFallBack.component";
 
 export function Avatar({
   initials,
@@ -8,14 +9,14 @@ export function Avatar({
   alt,
 }: {
   initials: string;
-  src: string;
-  alt: string;
+  src?: string;
+  alt?: string;
 }) {
   return (
     <AvatarWrapper>
       <AvatarImage
-        src={src ?? "https://github.com/shadcn.png"}
-        alt={alt ?? "@shadcn"}
+        src={src || "https://github.com/shadcn.png"}
+        alt={alt || "@shadcn"}
       />
       <AvatarFallback>{initials}</AvatarFallback>
     </AvatarWrapper>

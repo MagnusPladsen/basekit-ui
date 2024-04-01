@@ -1,6 +1,6 @@
 import React from "react";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
-import { cn } from "@/src/utils/cn";
+import { cn } from "../../../utils/cn";
 
 const AvatarWrapper = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
@@ -15,6 +15,5 @@ const AvatarWrapper = React.forwardRef<
     {...props}
   />
 ));
-AvatarWrapper.displayName = AvatarPrimitive.Root.displayName;
 
 export default AvatarWrapper;
