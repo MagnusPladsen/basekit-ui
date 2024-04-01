@@ -1,12 +1,8 @@
-import BKButtonIcons from "./components/Button.icons";
+import { BKIconLocationProp, BKIconProp } from "../Icons/Icons.type";
 import buttonVariants from "./Button.styles";
 import { type VariantProps } from "class-variance-authority";
 
 type BKButtonArrowProp = "up" | "down" | "left" | "right";
-
-type BKButtonIconProp = keyof typeof BKButtonIcons;
-
-type BKButtonIconLocationProp = "left" | "right";
 
 interface BKButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -16,8 +12,8 @@ interface BKButtonProps
   loading?: boolean;
   disableOnClickEffect?: boolean;
   arrow?: BKButtonArrowProp;
-  icon?: BKButtonIconProp;
-  iconLocation?: BKButtonIconLocationProp;
+  icon?: BKIconProp;
+  iconLocation?: BKIconLocationProp;
   iconSize?: number;
   iconColor?: string;
   iconClassName?: string;
@@ -26,6 +22,4 @@ interface BKButtonProps
 export type {
   BKButtonProps,
   BKButtonArrowProp,
-  BKButtonIconLocationProp,
-  BKButtonIconProp,
 };

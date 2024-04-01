@@ -1,5 +1,5 @@
 import { BKButtonIconProp, BKButtonIconLocationProp } from "../Button.types";
-import BKButtonIcons, { showIcon } from "./Button.icons";
+import BKButtonIcons, { showIcon } from "../../Icons/Icons.component";
 
 const IconWrapper = ({
   icon,

@@ -186,7 +186,7 @@ export const AlertWithIcon: Story = {
   },
 };
 
-export const LinkWithCustomIcon: Story = {
+export const LinkWithSpecifiedIcon: Story = {
   args: {
     variant: "link",
     children: "Custom link",
