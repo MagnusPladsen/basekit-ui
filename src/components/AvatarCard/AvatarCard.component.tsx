@@ -36,7 +36,7 @@ function AvatarCard({
         <div className="flex flex-col">
           <p className={cn("text-lg", nameClassName)}>{name}</p>
           {role && (
-            <p className={cn("text-xs text-primary", roleClassName)}>{role}</p>
+            <p className={cn("text-xs text-primary-light", roleClassName)}>{role}</p>
           )}
         </div>
       </div>
