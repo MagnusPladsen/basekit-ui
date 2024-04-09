@@ -36,7 +36,14 @@ const meta = {
       defaultValue: "",
     },
   },
-  args: { name: "John Doe", image: "", role: "", bio: "" },
+  args: {
+    name: "John Doe",
+    image: "https://i.pravatar.cc/300",
+    role: "Software Engineer",
+    bio: "This is a example for an avatar card.",
+    phone: "123-456-7890",
+    email: "john.doe@example.com",
+  },
 } satisfies Meta<typeof AvatarCard>;
 
 export default meta;
