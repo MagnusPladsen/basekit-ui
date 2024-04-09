@@ -1,7 +1,6 @@
-import AvatarWrapper from "./components/AvatarWrapper.component";
-import AvatarImage from "./components/AvatarImage.component";
-import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import AvatarFallback from "./components/AvatarFallBack.component";
+import AvatarImage from "./components/AvatarImage.component";
+import AvatarWrapper from "./components/AvatarWrapper.component";
 
 export function Avatar({
   initials,
