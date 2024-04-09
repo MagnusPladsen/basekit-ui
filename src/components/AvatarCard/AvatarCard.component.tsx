@@ -27,7 +27,7 @@ function AvatarCard({
   return (
     <div
       className={cn(
-        " border rounded-lg p-4 bg-white shadow-md flex flex-col gap-4",
+        "border rounded-lg p-4 bg-white shadow-md flex flex-col gap-4 w-fit max-w-sm",
         containerClassName
       )}
     >
@@ -36,26 +36,36 @@ function AvatarCard({
         <div className="flex flex-col">
           <p className={cn("text-lg", nameClassName)}>{name}</p>
           {role && (
-            <p className={cn("text-xs text-primary-light", roleClassName)}>{role}</p>
+            <p
+              className={cn(
+                "text-xs text-primary-light truncate w-[250px]",
+                roleClassName
+              )}
+            >
+              {role}
+            </p>
           )}
         </div>
       </div>
-      {bio && <p className={cn("text-md", bioClassName)}>{bio}</p>}
+      {bio && <p className={cn("text-md w-full", bioClassName)}>{bio}</p>}
       {(!!phone || !!email) && (
-        <div className="flex justify-between text-xs text-gray-400 gap-8">
+        <div className="flex justify-between text-xs text-gray-400 gap-8 ">
           {phone && (
-            <div className={cn("text-md flex gap-1", phoneClassName)}>
+            <div className={cn("text-md flex gap-1 ", phoneClassName)}>
               <Phone className={cn("h-4 aspect-square", iconClassName)} />
-              {phone}
+              <p className="truncate w-[125px]">{phone}</p>
             </div>
           )}
           {email && (
             <a
               href={`mailto:${email}`}
-              className={cn("text-md flex gap-1 hover:text-gray-500 hover:underline transition-all", emailClassName)}
+              className={cn(
+                "text-md flex gap-1 hover:text-gray-500 hover:underline transition-all",
+                emailClassName
+              )}
             >
               <Mail className={cn("h-4 aspect-square", iconClassName)} />
-              {email}
+              <p className="truncate w-[125px]">{email}</p>
             </a>
           )}
         </div>
