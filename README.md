@@ -17,8 +17,36 @@ JavaScript Object Styling: Utilize JavaScript object styling to customize compon
 Extensive Customization: BaseKitUI offers a wide range of customization options, allowing you to tailor components to your specific design requirements.
 Open-Source Collaboration: Built with open-source collaboration in mind, FlexiBaseKit-UI encourages contribution and community-driven development.
 
+## Components
+BaseKitUI is under development and will be updated with new components regularly. The current components include:
+- Button
+- Avatar
+- AvatarCard
+- Icon
+
+## Installation
+To install BaseKitUI, run the following command:
+```npm install basekit-ui```
+
+## Usage
+To use BaseKitUI components in your project, import the desired component and add it to your project. For example, to use the Button component:
+```ts
+import { Button } from 'basekit-ui';
+
+function App() {
+  return (
+    <Button>Test button</Button>
+  );
+}
+```
+
+## Documentation
+For detailed information on how to use BaseKitUI components, refer to the documentation.
+[Read documentation](https://basekitui.pladsen.dev/)
+
 ## Contributing
-We welcome contributions from the community! Please refer to the contribution guidelines for more information.
+We welcome contributions from the community! Fork the repository, make your changes, and submit a pull request. We appreciate your input and look forward to your contributions.
 
 ## License
 BaseKitUI is open-source software licensed under the MIT License.
+Use is permitted for any purpose, including commercial applications, at no cost. The only requirement is that you include the license in your project.
