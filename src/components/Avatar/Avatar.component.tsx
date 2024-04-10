@@ -21,3 +21,5 @@ export function Avatar({
     </AvatarWrapper>
   );
 }
+
+export default Avatar;
