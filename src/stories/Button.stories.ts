@@ -1,11 +1,9 @@
+import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import Button from "../components/Button";
-import { withThemeByClassName } from "@storybook/addon-themes";
-import "../index.css";
-import buttonVariants from "../components/Button/Button.styles";
-import { SquareArrowOutUpRight } from "lucide-react";
 import { iconList } from "../components/Icons/Icons.component";
+import "../index.css";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
