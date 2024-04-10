@@ -8,13 +8,13 @@ import {
 } from "lucide-react";
 import React from "react";
 import { cn } from "../../utils/cn";
+import { BKIconLocationProp, BKIconProp } from "../Icons/Icons.type";
 import buttonVariants from "./Button.styles";
 import {
   BKButtonProps,
 } from "./Button.types";
 import ButtonWrapper from "./components/ButtonWrapper.component";
 import IconWrapper from "./components/IconWrapper.component";
-import { BKIconProp, BKIconLocationProp } from "../Icons/Icons.type";
 
 /**
  * The Button component renders a button element with specified props and styling.
