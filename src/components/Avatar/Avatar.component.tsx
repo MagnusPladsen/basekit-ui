@@ -14,8 +14,8 @@ export function Avatar({
   return (
     <AvatarWrapper>
       <AvatarImage
-        src={src || "https://github.com/shadcn.png"}
-        alt={alt || "@shadcn"}
+        src={src ?? "https://github.com/shadcn.png"}
+        alt={alt ?? "@shadcn"}
       />
       <AvatarFallback>{initials}</AvatarFallback>
     </AvatarWrapper>
