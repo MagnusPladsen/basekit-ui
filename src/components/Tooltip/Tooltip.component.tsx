@@ -1,13 +1,15 @@
-import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
+import * as React from "react";
+
 import { cn } from "../../utils/cn";
-import React from "react";
- 
-const TooltipProvider = TooltipPrimitive.Provider
- 
-const Tooltip = TooltipPrimitive.Root
- 
-const TooltipTrigger = TooltipPrimitive.Trigger
- 
+import { BKTooltipProps } from "./Tooltip.types";
+
+const TooltipProvider = TooltipPrimitive.Provider;
+
+const TooltipRoot = TooltipPrimitive.Root;
+
+const TooltipTrigger = TooltipPrimitive.Trigger;
+
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
@@ -21,7 +23,40 @@ const TooltipContent = React.forwardRef<
     )}
     {...props}
   />
-))
-TooltipContent.displayName = TooltipPrimitive.Content.displayName
- 
-export default Tooltip
+));
+TooltipContent.displayName = TooltipPrimitive.Content.displayName;
+
+/**
+ * The ToolTip function in TypeScript React renders a tooltip component with specified text and
+ * styling.
+ * @param {BKTooltipProps}  - The `ToolTip` function takes the following parameters:
+ * @param {React.ReactNode} children - The content that will be wrapped by the tooltip.
+ * @param {string} text - The text that will be displayed inside the tooltip.
+ * @param {string} className - The class name for the tooltip content.
+ * @param {number} skipDelayDuration - The duration from when the pointer enters the trigger until
+ * the tooltip gets opened.
+ * @param {boolean} defaultOpen - The default state of the tooltip.
+ * @param {boolean} open - The state of the tooltip.
+ * @param {number} delayDuration - The duration from when the pointer enters the trigger until the
+ * tooltip gets opened.
+ * @param {boolean} disableHoverableContent - When `true`, trying to hover the content will result
+ * in the tooltip closing as the pointer leaves the trigger.
+ * @returns The ToolTip function is returning a JSX structure that includes a TooltipProvider component
+ * with a specified skipDelayDuration prop, a TooltipRoot component with otherProps spread, a
+ * TooltipTrigger component wrapping the children, and a TooltipContent component with a paragraph
+ * element containing the text prop.
+ */
+function ToolTip({ children, text, className, skipDelayDuration, ...otherProps }: BKTooltipProps) {
+  return (
+    <TooltipProvider skipDelayDuration={skipDelayDuration}>
+      <TooltipRoot  {...otherProps}>
+        <TooltipTrigger >{children}</TooltipTrigger>
+        <TooltipContent className={className}>
+          <p>{text}</p>
+        </TooltipContent>
+      </TooltipRoot>
+    </TooltipProvider>
+  );
+}
+
+export default ToolTip;
