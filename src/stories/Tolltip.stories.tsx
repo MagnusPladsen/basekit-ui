@@ -1,9 +1,8 @@
 import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Meta, StoryObj } from "@storybook/react";
-import "../index.css";
-import Tooltip from "../components/Tooltip/Tooltip.component";
 import { Button } from "../components";
-import { BKButtonProps } from "../components/Button/Button.types";
+import Tooltip from "../components/Tooltip/Tooltip.component";
+import "../index.css";
 
 const meta = {
   title: "Components/Tooltip",
@@ -25,10 +24,41 @@ const meta = {
       control: { type: "text" },
       defaultValue: "Tooltip text",
     },
+    className: {
+      description: "The class name for the tooltip content.",
+      type: { name: "string" },
+      control: { type: "text" },
+    },
+    skipDelayDuration: {
+      description: "The duration from when the pointer enters the trigger until the tooltip gets opened.",
+      type: { name: "number" },
+      control: { type: "number" },
+    },
+    defaultOpen: {
+      description: "The default state of the tooltip.",
+      type: { name: "boolean" },
+      control: { type: "boolean" },
+    },
+    open: {
+      description: "The state of the tooltip.",
+      type: { name: "boolean" },
+      control: { type: "boolean" },
+    },
+    delayDuration: {
+      description: "The duration from when the pointer enters the trigger until the tooltip gets opened.",
+      type: { name: "number" },
+      control: { type: "number" },
+    },
+    disableHoverableContent: {
+      description: "When `true`, trying to hover the content will result in the tooltip closing as the pointer leaves the trigger.",
+      type: { name: "boolean" },
+      control: { type: "boolean" },
+    },
   },
   args: {
     children: "Hover me",
     text: "Tooltip text",
+
   },
 } satisfies Meta<typeof Tooltip>;
 
@@ -38,6 +68,7 @@ type Story = StoryObj<typeof Tooltip>;
 export const Default: Story = {
   args: {
     children: "Hover me",
+
   },
 };
 
