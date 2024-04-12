@@ -23,6 +23,8 @@ BaseKitUI is under development and will be updated with new components regularly
 - Avatar
 - AvatarCard
 - Icon
+- Tooltip
+- Calendar
 
 ## Installation
 To install BaseKitUI, run the following command:
